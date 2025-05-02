@@ -40,7 +40,7 @@ img{
     object-fit: cover;
 }
 
-header, #about-us section, #skills, #client section, #project{
+header, #about-us > div, #skills, #client > div, #project{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -120,7 +120,7 @@ nav a{
     padding : 40px 0
 }
 
-#about-us section{
+#about-us > div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,7 +197,7 @@ nav a{
     background-color: var(--blue);
 }
 
-#client section{
+#client > div{
     padding : 60px 15px 109px 15px
 }
 
