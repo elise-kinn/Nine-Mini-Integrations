@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin : 0;
+    text-decoration: none;
+    list-style: none;
+    color: var(--black);
+    object-fit: cover;
+}
+
+:root{
+    --black : black;
+    --grey : #F1F1F1;
+    --lightgrey : #F7F7F7;
+}
+
+a, p{
+    font-family: "Open Sans", sans-serif;
+}
+
+.open{
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2{
+    font-size: 52px;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h1, h2, h3, .prata{
+    font-family: "Prata", serif;
+}
+
+.roboto{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    background-color: var(--grey);
+    padding : 5px 6px;
+    border-radius: 12px;
+}
+
+img{
+    border-radius: 12px;
+}
+
+#discover, #specialties, #story section{
+    max-width: 1440px;
+    margin : 0 auto
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width : 180px;
+}
+
+header ul{
+    display: flex;
+    gap : 15px; 
+    margin-right : 15px
+}
+
+/* discover */
+#discover{
+    margin-bottom : 110px
+}
+
+#discover div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding : 55px 30px; 
+    gap : 130px
+}
+
+#discover img{
+    margin :  0 auto; 
+    height: 380px;
+    width : 91%; 
+    display: block;
+}
+
+/* specialties */
+#specialties{
+    margin-bottom : 100px
+}
+
+#specialties img{
+    width : 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+#specialties div{
+    display: flex;
+    gap : 15px
+}
+
+#specialties > p, #specialties h2{
+    text-align: center;
+}
+
+#specialties h2{
+    margin : 0 0 25px 0
+}
+
+#specialties > p{
+    margin-bottom : 20px; 
+    padding : 0 380px
+}
+
+#specialties a{
+    box-shadow: 0 0 10px 0 #00000033;
+    border-radius: 12px;
+}
+
+#specialties a p, h3{
+    padding-left : 22px; 
+}
+
+h3{
+    padding-bottom: 4px;
+    padding-top : 12px
+}
+
+.prata{
+    font-size: 24px;
+    padding-top:15px; 
+    padding-bottom : 9px;
+}
+
+/* story */
+
+#story{
+    background-color: var(--lightgrey);
+    padding-top : 160px
+}
+
+#story p{
+    width : fit-content
+}
+
+#story section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding : 0 5px 
+}
+
+footer ul{
+    display: flex;
+    gap : 15px;
+}
