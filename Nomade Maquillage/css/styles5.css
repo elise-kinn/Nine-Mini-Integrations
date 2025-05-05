@@ -10,6 +10,7 @@
     font-size: 16px;
     object-fit: cover;
     scroll-behavior: smooth;
+    transition: all 0.2s ease;
 }
 
 :root{
@@ -37,7 +38,7 @@ h3{
     font-size: 20px;
 }
 
-footer, header, #discover > div, #popular, #about > div, #coms{
+footer > div, header, #discover > div, #popular, #about > div, #coms, #contact > div{
     max-width: 1440px;
     margin : 0 auto;
     padding-left : 15px;
@@ -49,32 +50,59 @@ footer, header, #discover > div, #popular, #about > div, #coms{
     border-radius : 3px;
     font-size: 15px;
     font-weight: 500;
+    border : none;
 }
 
 .white{
     background-color: var(--white);
     color: var(--hot-pink);
     box-shadow: 0 0 10px 0 #00000080;
+
+    &:hover{
+        background-color: var(--hot-pink);
+        color : var(--black)
+    }
 }
 
 .red{
     background-color: var(--red);
     color: var(--white);
+
+    &:hover{
+        background-color: var(--hot-pink);
+        color : var(--pink);
+        transform: scale(1.05);
+    }
 }
 
 .pink{
     background-color: var(--hot-pink);
     color: var(--white);
     box-shadow: 0 0 10px 0 #00000080;
+
+    &:hover{
+        background-color: var(--pink);
+        color : var(--black)
+    }
+}
+
+.black{
+    background-color: var(--black);
+    color: var(--white);
+
+    &:hover{
+        background-color: var(--hot-pink);
+        color : var(--pink)
+    }
 }
 
 
 /* header */
-header{
+header, footer > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top : 10px;
+    padding : 10px 015px;
 
     img{
         width : 180px
@@ -86,7 +114,12 @@ header{
     }
 
     ul a{
-        color: var(--grey)
+        color: var(--grey);
+
+        &:hover{
+            font-weight: 600;
+            color : var(--hot-pink)
+        }
     }
 
     > a:last-of-type{
@@ -139,6 +172,9 @@ header{
 
         div{
             margin-top: 55px;
+            display: flex;
+            justify-content: center;
+            gap : 42px
         }
     }
 }
@@ -271,10 +307,93 @@ header{
             .grey-star{
                 color : var(--grey-star)
             }
+        }        
+    }
+}
+
+/* contact */
+#contact{
+    background-color: var(--pink);
+    padding-top : 130px; 
+    padding-bottom : 50px;
+
+    > div{
+        max-width: 560px;
+
+        h2{
+            text-align: center;
+            margin-bottom : 30px;
         }
 
-        
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            align-items: center;
+            column-gap : 22px;
+
+            input, textarea{
+                border: 1px solid var(--border-grey);
+                border-radius: 3px;
+                &::placeholder{
+                    color: var(--grey);
+
+                }
+            }
+
+            label{
+                font-family: "Open Sans", sans-serif;
+                margin-bottom : 4px;
+            }
+
+            input{
+                padding : 11px 0 11px 13px
+            }
+
+            textarea{
+                padding : 11px 0 50px 13px
+            }
+            
+            #name-input{
+                grid-column: 1/2;
+            };
+
+            #name-label, #email-label{
+                grid-row: 1;
+            }
+
+            #email-input{
+                grid-column: 2/3;
+                grid-row: 2;
+            };
+
+            #message-input{
+                grid-column: 1/-1;
+            };
+
+            #message-label{
+                grid-column: 1/-1; 
+                padding-top : 20px;
+            }
+
+            button{
+                grid-column: 1/-1;
+                width : fit-content; 
+                display: block;
+                place-self: center; 
+                margin-top : 25px;
+            }
+            
+        }
     }
 }
 
 /* footer */
+
+footer{
+    background-color: var(--black);
+
+    ul a{
+        color : var(--footer-grey)
+    }
+}

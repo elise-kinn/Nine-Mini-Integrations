@@ -52,7 +52,7 @@ img{
     border-radius: 12px;
 }
 
-#discover, #specialties, #story section{
+footer, header, #discover, #specialties, #story section{
     max-width: 1440px;
     margin : 0 auto
 }
