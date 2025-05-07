@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    scroll-behavior: smooth;
+    margin : 0;
+    text-decoration: none;
+    list-style: none;
+    color : black; 
+    box-sizing: border-box;
+    font-family: "Archivo", sans-serif;
+}
+
+:root{
+    --lightgrey : #F1F1F1;
+    --black : #000000;
+    --white : #FFFFFFFF;
+    --grey : #7A7A7A;
+    --greyer : #6B7280;
+    --border-grey : #69727D;
+}
+
+img{
+    width : 100%; 
+    object-fit: cover;
+}
+
+h1, h2, h3{
+    font-weight: 600;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+p{
+    line-height: 24px;
+    color : var(--grey);
+}
+
+.btn{
+    border: none;
+    padding : 14px 21px;
+    width: fit-content;
+}
+
+.white{
+    background-color: var(--white);
+    color : var(--black)
+}
+
+.black{
+    background-color: var(--black);
+    color : var(--white)
+}
+
+header, footer > div, #discover > div, #contact{
+    max-width: 1440px;
+    margin : 0 auto;
+}
+
+#about > div, #services, #portfolio > div{
+    max-width: 1140px;
+    margin : 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 10px 15px;
+
+    img{
+        width : 100px
+    }
+
+    ul{
+        display: flex;
+        gap : 40px
+    }
+}
+
+footer{
+    background-color: var(--black);
+
+    > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding : 100px 15px 10px 15px;
+        
+
+        img{
+            width : 100px
+        }
+
+        ul{
+            display: flex;
+            gap : 14px
+        }
+
+        *{
+            color : var(--white);
+        }
+    }
+}
+
+#discover::before{
+    content : "";
+    background-image: url(/img/photo1.jpg);
+    position: absolute;
+    height : 100%; 
+    width: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-size: 118%;
+    background-position: center;
+}
+
+#discover{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    height : 435px; 
+    overflow: hidden;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap : 20px
+    }
+
+    *{
+        position: relative;
+        z-index: 1;
+        
+    }
+
+    p, h1{
+        color: var(--white);
+    }
+}
+
+#about{
+    background-color: var(--lightgrey);
+    padding : 65px 15px; 
+
+    > div{
+        display: flex;
+        align-items: center;
+        gap : 26px;
+
+        div{
+            flex: 1;
+        }
+
+        > div:first-of-type{
+            p{
+                margin : 20px 0; 
+            }
+
+            p:last-of-type{
+                margin-bottom : 42px;
+            }
+        }
+
+        >div:last-of-type{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap : 16px;
+            
+            img{
+                aspect-ratio: 1 / 1;   /*square img*/
+            }
+        }
+    }
+}
+
+#services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
+    gap : 26px;
+    padding : 50px 15px;
+
+    h3, h2{
+        padding-bottom : 18px;
+    }
+
+    article{
+        background-color: var(--lightgrey);
+        padding : 10px 10px 20px 10px;
+    }
+
+    #article-1{
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    #article-2{
+        grid-row: 2;
+        grid-column: 1/2;
+    }
+
+    #article-3{
+        grid-row: 2;
+        grid-column: 2/3;
+    }
+
+    #article-4{
+        grid-column: 1/3;
+    }
+
+    > div{
+        grid-row: 1/-1;
+        grid-column: 3/4;
+        align-self: center;
+        padding : 0 25px;
+
+        p{
+            margin-bottom : 35px;
+            color: var(--greyer);
+        }
+
+        a{
+            margin : 0 auto;
+            display: block;
+        }
+    }
+}
+
+#portfolio{
+    background-color: var(--lightgrey);
+    padding : 50px 15px;
+
+    > div{
+        text-align: center;
+
+        p{
+            margin : 20px 0  40px 0;
+        }
+
+        > div{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap : 15px;
+            padding : 0 140px ;
+        }
+
+        img{
+            height: 250px;
+        }
+
+        #pic-1{
+            grid-row: 1;
+            grid-column: 1/3 ;
+        }
+        #pic-2{
+            grid-row: 1;
+            grid-column: 3/5;
+        }
+        #pic-3{
+            grid-row: 2;
+            grid-column: 1/2;
+        }
+        #pic-4{
+            grid-row: 2;
+            grid-column: 2/4;
+        }
+        #pic-5{
+            grid-row: 2;
+            grid-column: 4/5;
+        }
+        #pic-6{
+            grid-row: 3;
+            grid-column: 1/3 ;
+        }
+        #pic-7{
+            grid-row: 3;
+            grid-column: 3/5;
+        }
+    }
+}
+
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding : 40px 15px 60px 15px;
+    gap : 15px;
+
+    h2{
+        margin-bottom : 20px;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap : 23px;
+
+        textarea, button{
+            grid-column: 1/-1;
+            width: 100%;
+        }
+
+        textarea, input{
+            border : 1px solid var(--border-grey);
+            border-radius: 3px;
+
+            &::placeholder{
+                font-family: "Roboto", sans-serif;
+                font-size: 15px;
+                color : var(--grey)
+            }
+        }
+
+        input{
+            padding : 11px 0 11px 11px
+        }
+
+        textarea{
+            padding : 11px 0 50px 11px
+        }
+
+        button{
+            border-radius: 3px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            padding : 9px;
+        }
+    }
+}
